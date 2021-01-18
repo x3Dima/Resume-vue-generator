@@ -4,7 +4,7 @@
     <textarea
     id="value"
     :value="modelValue"
-    @input="change"
+    @input="inputData"
     rows="3"></textarea>
   </div>
 </template>
@@ -15,12 +15,11 @@ export default {
     modelValue: String,
   },
   methods: {
-    change(event) {
+    inputData(event) {
       this.$emit("update:modelValue", event.target.value)
     }
   }
 }
 </script>
 <style lang="">
-
 </style>
